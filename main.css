@@ -1,0 +1,110 @@
+body
+{
+    background-color: aqua;
+    perspective: 1000px;
+    perspective-origin: 50% 50px;
+}
+
+#resume {
+    float: left;
+}
+
+#cube {
+    --cube-size: 300px;
+    position: relative;
+    width: var(--cube-size);
+    height: var(--cube-size);
+    /* margin: 0 auto; */
+    top: 100px;
+    left: 400px;
+    /* height: 400px;
+    width: 400px; */
+    transform-style: preserve-3d;
+    /* transform: rotateY(45deg); */
+    /* transform: rotate3d(1,1,0,45deg); */
+    /* transition: 3s; */
+    /* animation: spin 4s cubic-bezier(0.19, 1, 0.22, 1) forwards; */
+}
+
+/* @keyframes bounce {
+    0% { transform: scale3d(1,1,1) }
+    20% { transform: scale3d(2,2,2) }
+    100% { transform: scale3d(1,1,1) }
+} */
+
+@keyframes spinToLeft {
+    from { transform: rotateY(0) rotateX(0) rotateZ(0)}
+	to { transform: rotateY(90deg) rotateX(720deg) rotateZ(720deg)}
+}
+
+@keyframes spinToRight {
+    from { transform: rotateY(0) rotateX(0) rotateZ(0)}
+	to { transform: rotateY(-90deg) rotateX(720deg) rotateZ(720deg)}
+}
+
+@keyframes spinToTop {
+    from { transform: rotateY(0) rotateX(0) rotateZ(0)}
+	to { transform: rotateY(720deg) rotateX(-90deg) rotateZ(720deg)}
+}
+
+@keyframes spinToBottom {
+    from { transform: rotateY(0) rotateX(0) rotateZ(0)}
+	to { transform: rotateY(720deg) rotateX(90deg) rotateZ(720deg)}
+}
+
+@keyframes spinToBack {
+    from { transform: rotateY(0) rotateX(0) rotateZ(0)}
+	to { transform: rotateY(720deg) rotateX(180deg) rotateZ(720deg)}
+}
+
+@keyframes spinToFront {
+    from { transform: rotateY(0) rotateX(0) rotateZ(0)}
+	to { transform: rotateY(720deg) rotateX(360deg) rotateZ(720deg)}
+}
+
+#cube div {
+    position: absolute;
+    height: var(--cube-size);
+    width: var(--cube-size);
+    /* padding: 20px; */
+    background-color: rgba(50, 50, 50, 0.7);
+    font-size:150px;
+    text-align:center;
+    line-height:var(--cube-size);
+    /* transition: transform 2s; */
+    /* background-color: tomato;
+    width: 400px;
+    height: 400px;
+    border: solid 1em;
+    border-radius: 15%; */
+    /* backface-visibility: hidden; */
+    /* transition: 3s; */
+}
+
+.front {
+    transform: translateZ(calc(var(--cube-size) / 2));
+}
+
+.back {
+    transform: translateZ(calc(var(--cube-size)/2 * -1)) rotateY(180deg);
+}
+
+.right {
+    transform: translateZ(calc(var(--cube-size)/2 * -1)) rotateY(90deg);
+    transform-origin: right;
+}
+
+.left {
+    transform: translateZ(calc(var(--cube-size)/2 * -1)) rotateY(-90deg);
+    transform-origin: left;
+}
+
+.top {
+	transform: translateZ(calc(var(--cube-size)/2 * -1)) rotateX(90deg);
+    transform-origin: top;
+}
+
+.bottom {
+	transform: translateZ(calc(var(--cube-size)/2 * -1)) rotateX(-90deg);
+    transform-origin: bottom;
+}
