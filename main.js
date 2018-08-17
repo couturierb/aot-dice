@@ -13,27 +13,27 @@ function roll() {
 const getAnimationName = () => {
     switch (random()) {
         case 0 :
-            document.getElementById("resume-front").innerText++;
+            // document.getElementById("resume-front").innerText++;
             return "spinToFront";
             break;
         case 1 :
-            document.getElementById("resume-back").innerText++;
+            // document.getElementById("resume-back").innerText++;
             return "spinToBack"
             break;
         case 2 :
-            document.getElementById("resume-right").innerText++;
+            // document.getElementById("resume-right").innerText++;
             return "spinToRight"
             break;
         case 3 :
-            document.getElementById("resume-left").innerText++;
+            // document.getElementById("resume-left").innerText++;
             return "spinToLeft"
             break;
         case 4 :
-            document.getElementById("resume-top").innerText++;
+            // document.getElementById("resume-top").innerText++;
             return "spinToTop"
             break;
         case 5 :
-            document.getElementById("resume-bottom").innerText++;
+            // document.getElementById("resume-bottom").innerText++;
             return "spinToBottom"
             break;
     }

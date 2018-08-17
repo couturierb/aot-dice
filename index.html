@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Dice</title>
@@ -9,30 +10,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#21BA45">
 </head>
+
 <body>
-   <ul>
-        <li>Déplacement : <span id="resume-front">0</span></li>
-        <li>Titan : <span id="resume-back">0</span></li>
-        <li>Attaque : <span id="resume-top">0</span></li>
-        <li>Canon : <span id="resume-bottom">0</span></li>
-        <li>Bouclier : <span id="resume-left">0</span></li>
-        <li>Grapin : <span id="resume-right">0</span></li>
-   </ul>
-    <div id="cube" class="bounce" onclick="roll()">
-        <div class="front">move</div>
-		<div class="back">titan</div>
-		<div class="top">att</div>
-		<div class="bottom">can</div>
-		<div class="left">bou</div>
-		<div class="right">gra</div>
+    <!-- <ul>
+        <li>Déplacement :
+            <span id="resume-front">0</span>
+        </li>
+        <li>Titan :
+            <span id="resume-back">0</span>
+        </li>
+        <li>Attaque :
+            <span id="resume-top">0</span>
+        </li>
+        <li>Canon :
+            <span id="resume-bottom">0</span>
+        </li>
+        <li>Bouclier :
+            <span id="resume-left">0</span>
+        </li>
+        <li>Grapin :
+            <span id="resume-right">0</span>
+        </li>
+    </ul>
+     -->
+    <div class="space3d">
+        <div id="cube" class="cube" onclick="roll()">
+            <div class="face front">move</div>
+            <div class="face back">titan</div>
+            <div class="face top">att</div>
+            <div class="face bottom">can</div>
+            <div class="face left">bou</div>
+            <div class="face right">gra</div>
+        </div>
     </div>
 </body>
 
 <script>
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker
-               .register('./sw.js')
-               .then(function() { console.log("Service Worker Registered"); });
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./sw.js')
+            .then(function () { console.log("Service Worker Registered"); });
     }
 </script>
 
